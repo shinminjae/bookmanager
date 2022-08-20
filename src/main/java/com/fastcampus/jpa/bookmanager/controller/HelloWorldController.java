@@ -10,6 +10,8 @@ public class HelloWorldController {
     public String helloWorld(){
         System.out.println("test");
         System.out.println("master");
+        System.out.println("branch");
+        System.out.println("test");
         return "hello-world";
     }
 
