@@ -8,6 +8,8 @@ public class HelloWorldController {
 
     @GetMapping("/hello-world")
     public String helloWorld(){
+        System.out.println("test");
+        System.out.println("master");
         return "hello-world";
     }
 
