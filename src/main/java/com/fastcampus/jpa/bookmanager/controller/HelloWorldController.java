@@ -8,9 +8,9 @@ public class HelloWorldController {
 
     @GetMapping("/hello-world")
     public String helloWorld(){
-        System.out.println("test");
+        System.out.println("test2");
         System.out.println("branch");
-        System.out.println("test");
+        System.out.println("test2");
         return "hello-world";
     }
 
