@@ -148,6 +148,41 @@ class UserRepositoryTest {
 
     }
 
+    @Test
+    void select() {
+       // System.out.println(userRepository.findByName("martin")); //이러면 이름이 데이터에 두개이상 존재하면 에러
+
+        /*아래 모두 동일한 쿼리로 가져온다. */
+        /*System.out.println("findByEmail : " + userRepository.findByEmail("martin@fastcampus.com"));
+        System.out.println("getByEmail : " + userRepository.getByEmail("martin@fastcampus.com"));
+        System.out.println("readByEmail : " + userRepository.readByEmail("martin@fastcampus.com"));
+        System.out.println("queryByEmail : " + userRepository.queryByEmail("martin@fastcampus.com"));
+        System.out.println("searchByEmail : " + userRepository.searchByEmail("martin@fastcampus.com"));
+        System.out.println("streamByEmail : " + userRepository.streamByEmail("martin@fastcampus.com"));
+        System.out.println("findUsersByEmail : " + userRepository.findUsersByEmail("martin@fastcampus.com"));
+        System.out.println("findSomethingByEmail : " + userRepository.findSomethingByEmail("martin@fastcampus.com"));
+
+        System.out.println("findTop1ByName : " + userRepository.findTop1ByName("martin"));
+        System.out.println("findFirst1ByName : " + userRepository.findFirst1ByName("martin"));*/
+
+        System.out.println("findByEmailAndName : " + userRepository.findByEmailAndName("martin@fastcampus.com","martin"));
+        System.out.println("findByEmailOrName : " + userRepository.findByEmailOrName("martin@fastcampus.com","dennis"));
+        System.out.println("findByCreatedAtAfter : " + userRepository.findByCreatedAtAfter(LocalDateTime.now().minusDays(30L)));
+        System.out.println("findByIdAfter : " + userRepository.findByIdAfter(4L));
+
+        System.out.println("findByCreatedAtGreaterThan : " + userRepository.findByCreatedAtGreaterThan (LocalDateTime.now().minusDays(30L)));
+
+        System.out.println("findByCreatedAtGreaterThanEqual : " + userRepository.findByCreatedAtGreaterThanEqual (LocalDateTime.now().minusDays(30L)));
+        System.out.println("findByCreatedAtBetween : " + userRepository.findByCreatedAtBetween (LocalDateTime.now().minusDays(30L),LocalDateTime.now().plusDays(1L)));
+        System.out.println("findByIdBetween : " + userRepository.findByIdBetween (1L,5L));
+        System.out.println("findByIdGreaterThanEqualAndIdLessThanEqual : " + userRepository.findByIdGreaterThanEqualAndIdLessThanEqual (1L,5L));
+
+
+
+
+
+    }
+
 
 
 }
